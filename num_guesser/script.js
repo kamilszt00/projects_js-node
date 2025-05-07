@@ -6,7 +6,11 @@ let currentRoundNumber = 1;
 const generateTarget = () => Math.floor(Math.random() * 10)
 
 function compareGuesses(user,computer,secret) {
-    return (Math.abs(secret - user) <= (Math.abs(secret - computer))) ? true : false;
+        console.log(secret)
+        return (Math.abs(secret-user)) <= (Math.abs(secret-computer)) ? true : false;
+
+
+    
         
 }
 
@@ -20,4 +24,7 @@ const updateScore = (win) => {
 
 }
 
+const advancedRound = () => currentRoundNumber ++;
 
+
+console.log(compareGuesses(2,6,generateTarget()))
